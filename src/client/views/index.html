@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Travel App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Travel App</h1>
+        </header>
+
+        <main>
+            <section>
+                <div id="wherePage" class="where-page">
+                    <div class="form">
+                      <form class="where-form">
+                          <h2>Location finder</h2>
+                          <p>You can check information about the location you are visiting just by entering the country.</p>
+                        <input type="text" required id="where" placeholder="location ( 'fr' , 'usa' ,..)"/>
+                        <label>Starting date :</label><input  required type="date" id="date" />
+                        <label>Ending date :</label><input  required type="date" id="enddateV" />
+                        <button id="submit" >Search</button>
+                      </form>
+                    </div>
+                  </div>
+                  <div id="whereInfo" class="where-info form">
+                    <img src=""  id="where-src" alt="Location image"/>
+                    <div class="info">
+                        <h2 id="location" ></h2>
+                        <h2 id="toDate" ></h2>
+                        <h2 id="endDate" ></h2>
+                        <h4>Weather Information</h4>
+                        <p id="temp"></p>
+                        <a href="#" id="back" >Back</a>
+                    </div>
+                  </div>
+            <section>
+
+        </main>
+
+        <footer>
+            <p>© 2020 Copyright:Shahad Fahad</p>
+        </footer>
+
+    </body>
+    <script>
+       if( 'serviceWorker' in navigator) {
+           window.addEventListener('load',()=>{
+               navigator.serviceWorker.register('../../sw.js')
+           })
+       }
+    </script>
+</html>
